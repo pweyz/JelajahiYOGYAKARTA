@@ -1,0 +1,229 @@
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Transparansi hitam */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Agar navbar berada di atas gambar */
+    top: 0; /* Tetap di bagian atas */
+    z-index: 9; /* Di atas gambar */
+    
+  }
+  
+  nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  nav a {
+    height: 100%;
+    padding: 8px 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  nav a:hover {
+    transform: scale(1.10);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: whitesmoke;
+    border-radius: 50px;
+  }
+  
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 15px;
+  }
+  
+  .navbar img {
+    width: 50px;
+  }
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .sidebar a:hover{
+    color: rgb(80, 79, 79);
+  }
+  .menu-button{
+    display: none;
+  }
+  @media (max-width: 970px) {
+    .hideonmobile {
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    /* Aturan baru untuk hamburger */
+    nav ul {
+      justify-content: flex-end; /* Pastikan item berada di sebelah kanan */
+      padding-right: 20px; /* Tambahkan padding agar tidak terlalu rapat dengan tepi */
+    } 
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 50%;
+    }
+  }  
+.carousel {
+    width: 80%; /* Atur lebar carousel */
+    margin: 0 auto; /* Agar carousel di tengah */
+    margin-top: 100px;
+  }
+  .carousel-caption p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+  }
+  .carousel-caption a{
+    text-decoration: none;
+  }
+  .h2-berita{
+    font-size: 3rem;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    margin-top: 100px;
+  
+  }
+  .carousel-item img{
+    object-fit: cover;
+  }
+  .berita-judul{
+    width: 100%;
+    /* height: 839px; */
+    margin-top: -90px;
+    padding-top: 90px;
+    top: 0;
+    position: relative;
+    /* z-index: 100; */
+    background: linear-gradient(to bottom, black, #CFCFCF );
+  
+  }
+  .berita-terkini {
+    width: 100%;
+  }
+  .footer-berita{
+    background: linear-gradient(to bottom, #D9D9D9, black);
+  }
+  
+  
+  .card-berita:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-berita.panjang {
+    width: 100%; /* Memenuhi satu baris */
+    background-color: #8B6F62;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+  
+  .card-body-berita {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .card-img-berita {
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-container-berita {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kartu per baris */
+    row-gap: 60px;
+    padding: 30px;
+    column-gap: 50px;
+  }
+  
+  .card-berita2 {
+    background-color: #8b6f62e1;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s;
+  
+  }
+  
+  .card-berita2:hover {
+    transform: scale(1.1);
+    background-color: #756056;
+  
+  }
+  
+  .card-img-berita2 {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .card-body-berita2 {
+    padding: 20px;
+    border-radius: 30px;
+  }
+  .card-title-berita{
+    font-size: 1.5rem;
+    font-weight: 500;
+    /* padding: 50px; */
+  }
+  .card-title-berita2, .card-text-berita2 {
+    color: black;
+    padding: 10px;
+  }
+  .card-title-berita2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
+  .card-berita2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .full-width {
+    grid-column: span 2; /* Memastikan kartu ini memenuhi 2 kolom grid (1 kartu per baris) */
+    width: 100%; /* Lebar penuh */
+  }
+  .card-text{
+  justify-content: center;
+  width: 100%;
+  }
+  .card-text-berita,.card-text-berita2{
+    font-size: 1.1rem;
+  }

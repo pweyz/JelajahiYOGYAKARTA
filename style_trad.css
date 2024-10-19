@@ -1,0 +1,255 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Pastikan html dan body memiliki tinggi 100% */
+    font-family: "Poppins", sans-serif;
+    font-weight: 100px;
+    scroll-behavior: smooth;
+  }
+
+/* Reset margin dan padding ul serta menghapus bullet points */
+nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparansi hitam */
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* Agar navbar berada di atas gambar */
+  top: 0; /* Tetap di bagian atas */
+  z-index: 999; /* Di atas gambar */
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  height: 100%;
+  padding: 8px 25px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  transition: all 0.3s;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  transform: scale(1.10);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: whitesmoke;
+  border-radius: 50px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 15px;
+} 
+
+.navbar img{
+  width: 50px;
+}
+.logoakhir img{
+  width: 150px;
+  margin-top: 30px;
+  padding-left: 50px;
+}
+.footer{
+  background: linear-gradient(180deg, #241E1E, #3F3434, #515050);
+}
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display:none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.sidebar a:hover{
+  color: rgb(80, 79, 79);
+}
+.menu-button{
+  display: none;
+}
+@media (max-width: 970px) {
+  .hideonmobile {
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  /* Aturan baru untuk hamburger */
+  nav ul {
+    justify-content: flex-end; /* Pastikan item berada di sebelah kanan */
+    padding-right: 20px; /* Tambahkan padding agar tidak terlalu rapat dengan tepi */
+  } 
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+  /* Section background */
+  .bg-tradisi {
+    height: 100vh; /* Gunakan 100% dari tinggi layar (viewport) */
+    display: flex;
+    background-image: url('asset/tra.jpg'); /* Pastikan URL gambar benar */
+    background-size: cover; /* Agar gambar memenuhi seluruh area */
+    background-position: center; /* Agar gambar tetap di tengah */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    justify-content: center; /* Memposisikan konten di tengah secara horizontal */
+    align-items: center; /* Memposisikan konten di tengah secara vertikal */
+    position: relative;
+    margin-top: -40px;
+  }
+  
+  .tradisi-text {
+    color: white;
+    text-align: right;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    /* margin-top: 330px;
+    padding-left: 100px; */
+  }
+
+  .tradisi-text h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.1;
+  } 
+
+  .tradisi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #241E1E;padding-bottom: 30px;
+    padding-right: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+  }
+  
+  .img-tradisi {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Ubah layout menjadi vertikal */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Agar teks dan gambar center */
+    width: 100%;
+   right: 0;
+  }
+
+.img-tradisi h1 {
+  color: whitesmoke;
+  font-size: 3.4rem;
+  margin-bottom: 20px; /* Beri jarak antara teks dan gambar */
+  text-align: right;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.img-tradisi img {
+  width: 100%;              /* Mengatur lebar gambar agar 100% dari kontainernya */
+  max-width: 300px;            /* Agar gambar tetap proporsional */
+  border-radius: 10px;
+  box-shadow: 3px 3px black;
+  border: 3px solid rgb(80, 79, 79);
+  object-fit: cover;
+}
+
+.th-text {
+    display: flex;            /* Ubah menjadi flexbox */
+    flex-direction: column;    /* Atur agar elemen vertikal */
+    justify-content: flex-start; /* Kontrol elemen tetap berada di atas */
+    padding: 20px;
+    position: relative;
+  }
+  
+  .th-text h2 {
+    font-size: 2.2rem;
+    color: #ffa12e;
+    margin-bottom: 60px;
+  }
+  
+  .th-text p {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    line-height: 1.6;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .tentang-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3F3434;
+    position: relative;
+    height: auto;  
+    flex-wrap: wrap;
+}
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.text-container p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+
+.text-container h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color:#fbb764;
+    font-weight: 700;
+}
+
+.image-container img {
+    width: 100%; 
+    max-width: 500px; 
+    border-radius: 10px;
+    object-fit: cover;
+}
+.galeri {
+  background-color: #8b6f62;
+  padding-top: -150px;
+  padding-bottom: 100px;
+}
+.title-text-center h1 {
+  color:#fbb764 ;
+  font-weight: 650;
+  text-align: center;
+  font-size: 3rem;
+}

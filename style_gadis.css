@@ -1,0 +1,403 @@
+*{
+  font-family: "Poppins", sans-serif;
+}
+body{
+  font-family: "Poppins", sans-serif;
+  font-weight: 100px;
+}
+nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparansi hitam */
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; 
+  top: 0; /* Tetap di bagian atas */
+  z-index: 999; /* Di atas gambar */
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  height: 100%;
+  padding: 8px 25px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  transition: all 0.3s;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  transform: scale(1.10);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: whitesmoke;
+  border-radius: 50px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 15px;
+  
+}
+
+.navbar img{
+  width: 50px;
+}
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+  width: 50%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .sidebar a:hover{
+    color: rgb(80, 79, 79);
+  }
+  .menu-button{
+    display: none;
+  }
+  .ttg-bg{
+    background-image: url('asset/JOGJA.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center; /* Memposisikan konten di tengah secara horizontal */
+    align-items: center; /* Memposisikan konten di tengah secara vertikal */
+    background-size: cover; /* Membuat gambar latar menutupi seluruh area */
+    background-position: center;
+  margin-top: -40px;
+  }
+  .text-ttg h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: white;
+    font-size: 60px;
+    /* line-height: 1; */
+    
+  }
+
+  @media (max-width: 528px) {
+    .text-ttg h1{
+      font-size: 40px;
+    }
+
+    .ttg-bg{
+      height: 70vh;
+    }
+    
+  }
+  .btn-ttg a{
+    text-decoration: none;
+    color: #ffbb00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    font-size:20px;
+    font-weight: 400;
+    
+
+  }
+  .carousel-inner {
+    border-radius: 20px;
+    
+  }
+  .ttg-1{
+    background-color: #3A2D2D;
+    padding-top:150px;
+    padding-bottom: 100px;
+   
+  }
+  .ttg-informasi {
+    color: white;
+    background-color: #847B6F;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+  } 
+  .ttg-informasi h3{
+   margin-top: -80px;
+   margin-left: 15px ;
+   font-weight: 500;
+  }
+  .ttg-informasi p{
+    margin-left: 5px;
+    text-align: justify;
+  }
+  .sejarah{
+    background-color: #3A2D2D;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+  .text-sejarah{
+    background-color: #61524C;
+    width: 100%;
+    margin-top: -150px;
+    padding-bottom: 20px;
+    border-radius: 16px;
+  }
+  .text-sejarah h2{
+    color: #E4C59E;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 35px;
+  }
+  .text-sejarah p {
+    color: white;
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media (max-width: 970px) {
+    .hideonmobile {
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    /* Aturan baru untuk hamburger */
+    nav ul {
+      justify-content: flex-end; /* Pastikan item berada di sebelah kanan */
+      padding-right: 20px; /* Tambahkan padding agar tidak terlalu rapat dengan tepi */
+    } 
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+.keraton{
+    background-color: #3A2D2D;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+  .ttg-keraton{
+    background-color: #61524C;
+    
+    border-radius: 10px;
+    /* flex: 1; */
+  }
+  .ttg-keraton img{
+    border-radius: 20px;
+    width: 100%;
+  }
+  .text-keraton p{
+    color: white;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  .text-keraton1{
+    color: white;
+  }
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .text-lanjut{
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  .text-lanjut h3{
+    color: white;
+    font-weight: 100px;
+  }
+  .text-lanjut a{
+    color: #E4C59E;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  .text-lanjut a:hover{
+    color: #E4C59E;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  .bg-budaya {
+    background-image: url('asset/bgjogja2.jpg');
+    height: 100vh;
+    display: flex; /* Mengaktifkan Flexbox */
+    justify-content: center; /* Memposisikan konten di tengah secara horizontal */
+    align-items: center; /* Memposisikan konten di tengah secara vertikal */
+    background-size: cover; /* Membuat gambar latar menutupi seluruh area */
+    background-position: center; /* Menyelaraskan gambar di tengah */
+  }
+  
+  .welcome-budaya h1 {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 70px;
+    margin: 0; /* Menghilangkan margin default h1 */
+  }
+
+  @media (max-width:576px) {
+    .welcome-budaya h1 {
+    font-size: 42px;
+    }
+  }
+  
+  .peta-jogja{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #373535;
+    
+    
+  }
+.peta img{
+  border-radius: 7px;
+}
+
+.khas-budaya{
+  padding-top: 30px;
+  padding-bottom: 100px;
+  background-color: #E9E9E9;
+  
+}
+.senjata{
+  background-color: #A98676;
+  border-radius: 40px;
+  height: 100%;
+
+}
+.senjata h1{
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  color: #F8F4E1;
+  margin-bottom: 30px;
+}
+.senjata img{
+  border-radius: 20px;
+  width: 50%;
+}
+@media (max-width:576px) {
+  .senjata img{
+    border-radius: 20px;
+    width: 100%;
+  }
+}
+.senjata p{
+  color: #222121;
+  margin-top: 20px;
+  text-align: justify;
+  width: 100%;
+  /* margin-left: 5px; */
+}
+.baju {
+  background-color: #A98676;
+  padding-bottom: 70px;
+  border-radius: 40px;
+  /* margin-left: 30px; */
+
+}
+.baju img{
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 50px;
+
+}
+.baju h1{
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  padding-top: 35px;
+  color: #F8F4E1;
+  margin-right: 30px;
+}
+
+.baju p{
+  color: #222121;
+  text-align: justify;
+  margin-bottom: 10px;
+  margin-top: 10px;
+ 
+}
+.kearifan-lokal{
+  background: linear-gradient(to bottom, #E9E9E9, #373737);
+}
+.lokal {
+  margin-top: -50px;
+  background-color: #8B6F62;
+}
+.lokal h2 {
+  color: #E4C59E;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+.lokal p{
+  color: #222121;
+  font-weight: 500;
+  text-align: justify;
+}
+.lokal img{
+  
+  border-radius: 7px;
+}
+.suku {
+  background: linear-gradient(-45deg,  #565151 45%, #FFFFFF 50% );
+  width: 100%;
+  padding-top: 50px;
+}
+.text-suku{
+  background-color: rgba(215, 208, 205, 0.5);
+  padding-bottom: 50px;
+  border-radius: 20px;
+}
+.text-suku h2{
+  color: #323131;
+  font-weight: 1000px;
+  font-size: 50px;
+}
+.circle-suku{
+ width: 100px;
+ height: 100px;
+  background-color: #353535;
+  border-radius: 50%;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-suku h1{
+  color: white;
+  font-weight: 1000px;
+ text-align: center;
+
+}
